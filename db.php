@@ -1,5 +1,4 @@
 <?php
-
 // Database connection details
 $servername = "localhost";
 $username = "root";
@@ -40,3 +39,5 @@ if ($conn->multi_query($sql_contents)) {
 
 // Close connection
 $conn->close();
+
+ ?>
