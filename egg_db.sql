@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2024 at 01:05 PM
+-- Generation Time: Mar 09, 2024 at 03:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `eggcellent_db`
+-- Database: `egg_db`
 --
 
 -- --------------------------------------------------------
@@ -187,7 +187,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `employee_id`, `username`, `password`, `role`) VALUES
-(1, 1, 'admin', 'admin', 'admin');
+(1, 1, 'admin', '$2y$10$CMdwgXMwNKZ7KYXBlo1c6.V5/BRGihmcW5cJyG8dULwrv1mWbAdCS', 'admin');
 
 --
 -- Indexes for dumped tables
