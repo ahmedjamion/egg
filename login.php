@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="wrapper">
+        <div class="wrapper d-flex flex-column gap-2 bg-primary-subtle rounded-4 shadow">
             <h2>Login</h2>
             <p>Please fill in your credentials to login.</p>
             <?php
@@ -117,13 +117,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo '<div class="alert alert-danger">' . $login_err . '</div>';
             }
             ?>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group">
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="d-flex flex-column gap-2">
+                <div class="form-group d-flex flex-column gap-2">
                     <label>Username</label>
-                    <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                    <input type="text" name="username" class="form-control border-0 <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                     <span class="invalid-feedback"><?php echo $username_err; ?></span>
                 </div>
-                <div class="form-group">
+                <div class="form-group d-flex flex-column gap-2">
                     <label>Password</label>
                     <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                     <span class="invalid-feedback"><?php echo $password_err; ?></span>
